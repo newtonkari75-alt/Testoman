@@ -47,7 +47,7 @@
         body { font-family: 'Outfit', sans-serif; background-color: #050505; color: #f8fafc; }
         .glass { background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
         
-        /* Botão Principal com Destaque Máximo */
+        /* Botão Principal */
         .btn-elite {
             background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
@@ -60,10 +60,10 @@
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         }
 
-        /* Cartões de Países - Fundo Destacado */
+        /* Cartões de Países - Destaque Visual */
         .country-card {
             background: linear-gradient(180deg, #111827 0%, #080c14 100%); 
-            border: 1px solid rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.4s ease;
         }
         .country-card:hover {
@@ -72,7 +72,7 @@
             transform: translateY(-8px);
         }
 
-        /* Botões de Países com Azul Vibrante */
+        /* Botões de Países */
         .btn-country {
             background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -87,7 +87,7 @@
         .hidden-section { display: none; }
         html { scroll-behavior: smooth; }
         
-        /* Ajuste de Proporção do Botão Fixo Mobile */
+        /* Ajuste Fino Mobile Sticky CTA */
         .mobile-sticky-cta {
             position: fixed;
             bottom: 20px;
@@ -146,7 +146,7 @@
                 ELITE STATUS. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-elite-glow to-elite-accent text-glow uppercase">Remastered Performance.</span>
             </h1>
 
-            <!-- 3. Product Showcase (Posicionado agora entre título e texto para mobile e desktop) -->
+            <!-- 3. Product Showcase - Posicionado entre título e texto conforme pedido -->
             <div class="relative w-full max-w-[200px] md:max-w-md mb-8 md:mb-12 group">
                 <div class="absolute inset-0 bg-elite-accent/20 blur-[100px] md:blur-[140px] rounded-full group-hover:bg-elite-accent/30 transition-all duration-700"></div>
                 <img src="https://i.imgur.com/7hKBvwf.png" alt="TestoLink Elite" class="relative z-10 w-full mx-auto drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] group-hover:scale-105 transition duration-500">
@@ -281,7 +281,7 @@
                 hero_subtitle: "Het precisieprotocol voor mannen die het absolute maximale van hun biologie eisen. Optimaliseer energie, focus en fysieke dominantie.",
                 cta_button: "Activeer Protocol Nu",
                 select_title: "Selecteer Uw Logistiek Centrum",
-                select_subtitle: "Prioritaire verzending beschikbaar voor de volgende operationele hubs:",
+                select_subtitle: "Prioritaire verzending beschikbaar voor de seguinte operationele hubs:",
                 footer_story: "Ontwikkeld in hoogwaardige EU-laboratoria. TestoLink Elite is het resultaat van biomechanische voedingsoptimalisatie."
             },
             sv: {
@@ -291,15 +291,15 @@
                 hero_subtitle: "Precisionsprotokollet för män som kräver det absoluta maximala av sin biologi. Optimera energi, fokus och fysisk dominans.",
                 cta_button: "Aktivera Protokollet Nu",
                 select_title: "Välj Din Logistikhubb",
-                select_subtitle: "Prioriterad frakt tillgänglig för följande operativa hubbar:",
+                select_subtitle: "Prioriterad frakt tillgänglig för seguinte operativa hubbar:",
                 footer_story: "Konstruerad i högprecisions EU-laboratorier. TestoLink Elite är resultatet av biomekanisk näringsoptimering."
             }
         };
 
         const legalTexts = {
-            privacy: `<h1 class='text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase'>Privacy Protocol</h1><p>Data is military-grade encrypted.</p>`,
-            terms: `<h1 class='text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase'>Terms of Service</h1><p>18+ only.</p>`,
-            refund: `<h1 class='text-4xl font-black text-white mb-8 tracking-tighter uppercase'>Refund Policy</h1><p>30-day performance guarantee.</p>`
+            privacy: `<h1 class='text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase'>Privacy Protocol</h1><p>Military-grade encryption for all biological and transaction data.</p>`,
+            terms: `<h1 class='text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase'>Terms of Service</h1><p>Protocol restricted to 18+ individuals only.</p>`,
+            refund: `<h1 class='text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase'>Refund Policy</h1><p>30-day biological response guarantee included.</p>`
         };
 
         function setLanguage(lang, countryCode) {
