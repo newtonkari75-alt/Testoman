@@ -10,24 +10,17 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.imgur.com/7hKBvwf.png">
 
-    <!-- SEO & Meta Tags (Atualizado para https://testoman-eu.vercel.app/) -->
+    <!-- SEO & Meta Tags -->
     <title>TestoLink Elite - Advanced Male Vitality & Performance Protocol</title>
     <meta name="description" content="Unlock your biological potential. The premium European formula for sustained energy and peak physical performance. Serving UK, NL, and Sweden.">
     
     <link rel="canonical" href="https://testoman-eu.vercel.app/">
     
-    <!-- Hreflang Tags para SEO Internacional -->
+    <!-- Hreflang Tags -->
     <link rel="alternate" hreflang="en-gb" href="https://testoman-eu.vercel.app/?lang=en" />
     <link rel="alternate" hreflang="nl-nl" href="https://testoman-eu.vercel.app/?lang=nl" />
     <link rel="alternate" hreflang="sv-se" href="https://testoman-eu.vercel.app/?lang=sv" />
     <link rel="alternate" hreflang="x-default" href="https://testoman-eu.vercel.app/" />
-
-    <!-- Open Graph / Redes Sociais -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://testoman-eu.vercel.app/">
-    <meta property="og:title" content="TestoLink Elite - Performance Protocol">
-    <meta property="og:description" content="Premium European formula for high-performance men.">
-    <meta property="og:image" content="https://i.imgur.com/7hKBvwf.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -38,8 +31,8 @@
                         elite: {
                             base: '#050505',     
                             surface: '#0f1115',  
-                            accent: '#3b82f6',   
-                            glow: '#60a5fa',     
+                            accent: '#2563eb',   
+                            glow: '#3b82f6',     
                             muted: '#94a3b8'     
                         }
                     }
@@ -53,9 +46,39 @@
     <style>
         body { font-family: 'Outfit', sans-serif; background-color: #050505; color: #f8fafc; }
         .glass { background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
-        .neon-border { border: 1px solid rgba(59, 130, 246, 0.2); transition: all 0.3s ease; }
-        .neon-border:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); }
-        .text-glow { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+        
+        /* Botão Principal com Destaque Máximo */
+        .btn-elite {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .btn-elite:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 0 40px rgba(37, 99, 235, 0.8);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        /* Botões de Países - Destaque para não sumir no fundo */
+        .btn-country {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s ease;
+        }
+        .group:hover .btn-country {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+            transform: scale(1.02);
+        }
+
+        .neon-border { border: 1px solid rgba(59, 130, 246, 0.1); transition: all 0.3s ease; }
+        .neon-border:hover { 
+            border-color: rgba(59, 130, 246, 0.4); 
+            background: rgba(59, 130, 246, 0.04);
+        }
+
+        .text-glow { text-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
         .hidden-section { display: none; }
         html { scroll-behavior: smooth; }
         
@@ -74,16 +97,16 @@
 
         .flag-active {
             border: 1px solid #3b82f6;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
             opacity: 1 !important;
-            transform: scale(1.2);
+            transform: scale(1.25);
         }
     </style>
 </head>
 <body class="selection:bg-elite-accent selection:text-white">
 
     <!-- Barra de Urgência Superior -->
-    <div class="bg-elite-accent text-white text-[10px] md:text-xs font-extrabold py-2 text-center uppercase tracking-[0.2em]">
+    <div class="bg-elite-accent text-white text-[10px] md:text-xs font-extrabold py-2 text-center uppercase tracking-[0.2em] shadow-[0_4px_20px_rgba(37,99,235,0.4)]">
         <span data-i18n="top_bar">ELITE PERFORMANCE PROTOCOL | LIMITED DAILY ALLOCATION | FREE EU SHIPPING</span>
     </div>
 
@@ -91,7 +114,6 @@
     <nav class="glass sticky top-0 z-50 py-4 px-6 border-b border-white/5">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <!-- Logo Original Restaurada -->
                 <img src="https://i.imgur.com/vUgjO2Z.png" alt="TestoLink Logo" class="h-8 md:h-10 w-auto cursor-pointer object-contain" onclick="window.scrollTo(0,0)">
             </div>
             
@@ -104,78 +126,77 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-16 md:pt-28 pb-20 overflow-hidden text-center">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-elite-accent/10 via-transparent to-transparent -z-10"></div>
+    <section class="relative pt-16 md:pt-32 pb-24 overflow-hidden text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.1)_0%,_transparent_70%)] -z-10"></div>
         
         <div class="container mx-auto px-6 flex flex-col items-center">
-            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[10px] font-black text-elite-accent mb-8 uppercase tracking-widest">
-                <i class="fas fa-microchip"></i> <span data-i18n="hero_badge">ACTIVE BIO-SYNC PROTOCOL 2026</span>
+            <div class="inline-flex items-center gap-2 bg-elite-accent/10 border border-elite-accent/30 px-5 py-2 rounded-full text-[10px] font-black text-elite-glow mb-10 uppercase tracking-[0.2em] shadow-[0_0_15px_rgba(37,99,235,0.1)]">
+                <i class="fas fa-bolt"></i> <span data-i18n="hero_badge">ACTIVE BIO-SYNC PROTOCOL 2026</span>
             </div>
             
-            <h1 class="text-4xl md:text-8xl font-black mb-6 leading-[0.9] max-w-5xl tracking-tighter" data-i18n="hero_title">
-                ELITE STATUS. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-elite-accent to-elite-glow text-glow uppercase">Remastered Performance.</span>
+            <h1 class="text-4xl md:text-8xl font-black mb-8 leading-[0.9] max-w-5xl tracking-tighter" data-i18n="hero_title">
+                ELITE STATUS. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-elite-glow to-elite-accent text-glow uppercase">Remastered Performance.</span>
             </h1>
             
-            <p class="text-elite-muted text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed" data-i18n="hero_subtitle">
+            <p class="text-elite-muted text-lg md:text-xl max-w-2xl mb-14 font-light leading-relaxed" data-i18n="hero_subtitle">
                 O protocolo de precisão para homens que exigem o máximo da sua biologia. Optimize a energia, o foco e a dominância física com ciência de nutrientes europeia.
             </p>
 
-            <!-- Exibição do Produto -->
-            <div class="relative w-full max-w-md mb-16">
-                <div class="absolute inset-0 bg-elite-accent/15 blur-[120px] rounded-full"></div>
-                <img src="https://i.imgur.com/7hKBvwf.png" alt="TestoLink Elite" class="relative z-10 w-64 md:w-80 mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]">
+            <div class="relative w-full max-w-md mb-16 group">
+                <div class="absolute inset-0 bg-elite-accent/20 blur-[140px] rounded-full group-hover:bg-elite-accent/30 transition-all duration-700"></div>
+                <img src="https://i.imgur.com/7hKBvwf.png" alt="TestoLink Elite" class="relative z-10 w-64 md:w-80 mx-auto drop-shadow-[0_45px_45px_rgba(0,0,0,0.6)] group-hover:scale-105 transition duration-500">
             </div>
 
-            <button onclick="document.getElementById('hub-selector').scrollIntoView({behavior:'smooth'})" class="bg-elite-accent hover:bg-elite-glow text-white px-12 py-6 rounded-2xl font-black text-xl tracking-[0.15em] transition-all shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] uppercase">
+            <button onclick="document.getElementById('hub-selector').scrollIntoView({behavior:'smooth'})" class="btn-elite text-white px-14 py-7 rounded-2xl font-black text-xl tracking-[0.2em] uppercase">
                 <span data-i18n="cta_button">Ativar Protocolo Agora</span>
             </button>
         </div>
     </section>
 
-    <!-- Hub de Seleção de Países -->
-    <section id="hub-selector" class="py-24 bg-elite-surface/30">
+    <!-- Hub de Seleção de Países (Destaque nos Botões) -->
+    <section id="hub-selector" class="py-24 bg-elite-surface/40">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight" data-i18n="select_title">Escolha o seu Centro Logístico</h2>
-                <p class="text-elite-muted text-sm uppercase tracking-widest" data-i18n="select_subtitle">Envio prioritário disponível para os seguintes hubs operacionais:</p>
+                <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight text-white" data-i18n="select_title">Escolha o seu Centro Logístico</h2>
+                <p class="text-elite-muted text-sm uppercase tracking-widest font-semibold" data-i18n="select_subtitle">Envio prioritário disponível para os seguintes hubs operacionais:</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- UK -->
-                <a href="https://tl-track.com/tracker/vXxM/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
-                        <img src="https://flagcdn.com/w160/gb.png" alt="Reino Unido" class="w-16 h-auto rounded-md shadow-2xl">
-                        <span class="bg-red-500/20 text-red-500 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">Stock Crítico</span>
+                <a href="https://tl-track.com/tracker/vXxM/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center mb-8">
+                        <img src="https://flagcdn.com/w160/gb.png" alt="Reino Unido" class="w-16 h-auto rounded-md shadow-2xl mb-4">
+                        <span class="bg-red-600 text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg shadow-red-600/30">Stock Crítico</span>
                     </div>
-                    <h3 class="text-2xl font-black mb-2 tracking-tight">UNITED KINGDOM</h3>
-                    <p class="text-xs text-elite-muted mb-8 leading-relaxed">Direct dispatch from our UK logistics center. Royal Mail / DPD Tracked delivery.</p>
-                    <div class="inline-flex items-center text-elite-accent font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest">
+                    <h3 class="text-2xl font-black mb-3 tracking-tight text-white uppercase">United Kingdom</h3>
+                    <p class="text-xs text-elite-muted mb-10 leading-relaxed">Direct dispatch from our UK logistics center. Royal Mail / DPD Tracked delivery.</p>
+                    <div class="w-full py-4 rounded-xl btn-country text-white font-black text-xs transition-all uppercase tracking-[0.2em]">
                         Claim Allocation <i class="fas fa-chevron-right ml-2 text-[10px]"></i>
                     </div>
                 </a>
 
                 <!-- Netherlands -->
-                <a href="https://tl-track.com/tracker/vXxJ/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2 border-elite-accent/40">
-                    <div class="flex justify-between items-start mb-8">
-                        <img src="https://flagcdn.com/w160/nl.png" alt="Holanda" class="w-16 h-auto rounded-md shadow-2xl">
-                        <span class="bg-emerald-500/20 text-emerald-500 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">Hub Principal</span>
+                <a href="https://tl-track.com/tracker/vXxJ/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2 flex flex-col items-center text-center border-elite-accent/20">
+                    <div class="flex flex-col items-center mb-8">
+                        <img src="https://flagcdn.com/w160/nl.png" alt="Holanda" class="w-16 h-auto rounded-md shadow-2xl mb-4">
+                        <span class="bg-emerald-600 text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg shadow-emerald-600/30">Hub Principal</span>
                     </div>
-                    <h3 class="text-2xl font-black mb-2 tracking-tight">NETHERLANDS</h3>
-                    <p class="text-xs text-elite-muted mb-8 leading-relaxed">Fast-track shipping across the Benelux region via PostNL / DHL Express.</p>
-                    <div class="inline-flex items-center text-elite-accent font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest">
+                    <h3 class="text-2xl font-black mb-3 tracking-tight text-white uppercase">Netherlands</h3>
+                    <p class="text-xs text-elite-muted mb-10 leading-relaxed">Fast-track shipping across the Benelux region via PostNL / DHL Express.</p>
+                    <div class="w-full py-4 rounded-xl btn-country text-white font-black text-xs transition-all uppercase tracking-[0.2em]">
                         Claim Allocation <i class="fas fa-chevron-right ml-2 text-[10px]"></i>
                     </div>
                 </a>
 
                 <!-- Sweden -->
-                <a href="https://tl-track.com/tracker/vXxK/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
-                        <img src="https://flagcdn.com/w160/se.png" alt="Suécia" class="w-16 h-auto rounded-md shadow-2xl">
-                        <span class="bg-orange-500/20 text-orange-500 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">Alta Procura</span>
+                <a href="https://tl-track.com/tracker/vXxK/?sub_id={gclid}" class="neon-border bg-elite-surface p-10 rounded-[2.5rem] group transition-all hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center mb-8">
+                        <img src="https://flagcdn.com/w160/se.png" alt="Suécia" class="w-16 h-auto rounded-md shadow-2xl mb-4">
+                        <span class="bg-orange-600 text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg shadow-orange-600/30">Alta Procura</span>
                     </div>
-                    <h3 class="text-2xl font-black mb-2 tracking-tight">SWEDEN</h3>
-                    <p class="text-xs text-elite-muted mb-8 leading-relaxed">Optimized Nordic logistics with door-to-door expedited delivery protocol.</p>
-                    <div class="inline-flex items-center text-elite-accent font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest">
+                    <h3 class="text-2xl font-black mb-3 tracking-tight text-white uppercase">Sweden</h3>
+                    <p class="text-xs text-elite-muted mb-10 leading-relaxed">Optimized Nordic logistics with door-to-door expedited delivery protocol.</p>
+                    <div class="w-full py-4 rounded-xl btn-country text-white font-black text-xs transition-all uppercase tracking-[0.2em]">
                         Claim Allocation <i class="fas fa-chevron-right ml-2 text-[10px]"></i>
                     </div>
                 </a>
@@ -184,32 +205,36 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-elite-surface/50 border-t border-white/5 py-20">
+    <footer class="bg-elite-surface/60 border-t border-white/5 py-20">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
                 <div>
-                    <!-- Logo Original Restaurada -->
-                    <img src="https://i.imgur.com/vUgjO2Z.png" alt="TestoLink Logo" class="h-10 w-auto mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition">
-                    <p class="text-[11px] text-elite-muted leading-relaxed uppercase tracking-wider" data-i18n="footer_story">
+                    <img src="https://i.imgur.com/vUgjO2Z.png" alt="TestoLink Logo" class="h-10 w-auto mb-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                    <p class="text-[11px] text-elite-muted leading-relaxed uppercase tracking-wider font-medium max-w-sm" data-i18n="footer_story">
                         Engineered in high-precision EU laboratories. TestoLink Elite is the result of biomechanical nutrient optimization for the modern man who refuses to settle for less.
                     </p>
                 </div>
-                <div class="flex flex-col md:items-end justify-center gap-4">
-                    <p class="text-[10px] font-black text-white uppercase tracking-[0.3em]">Support Protocol</p>
-                    <a href="mailto:support@testolink.com" class="text-elite-muted hover:text-white transition text-sm">support@testolink.com</a>
+                <div class="flex flex-col md:items-end justify-center gap-6">
+                    <div class="text-right">
+                        <p class="text-[10px] font-black text-elite-glow uppercase tracking-[0.3em] mb-2">Support Protocol</p>
+                        <a href="mailto:support@testolink.com" class="text-white hover:text-elite-accent transition text-lg font-bold tracking-tight">support@testolink.com</a>
+                    </div>
+                    <div class="flex gap-4 text-elite-muted">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                        <i class="fab fa-cc-amex text-2xl"></i>
+                    </div>
                 </div>
             </div>
 
-            <!-- Políticas Legais -->
-            <div class="flex flex-wrap justify-center gap-10 text-[10px] font-black text-elite-muted uppercase tracking-widest mb-12">
-                <button onclick="showPolicy('privacy')" class="hover:text-elite-accent transition">Privacy</button>
-                <button onclick="showPolicy('terms')" class="hover:text-elite-accent transition">Terms</button>
-                <button onclick="showPolicy('refund')" class="hover:text-elite-accent transition">Refunds</button>
+            <div class="flex flex-wrap justify-center gap-10 text-[10px] font-black text-elite-muted uppercase tracking-[0.2em] mb-12">
+                <button onclick="showPolicy('privacy')" class="hover:text-white transition">Privacy</button>
+                <button onclick="showPolicy('terms')" class="hover:text-white transition">Terms</button>
+                <button onclick="showPolicy('refund')" class="hover:text-white transition">Refunds</button>
             </div>
 
-            <!-- Disclaimer de Isenção de Responsabilidade (Conformidade Google 2026) -->
-            <div class="text-center pt-10 border-t border-white/5">
-                <p class="text-[9px] text-elite-muted leading-tight max-w-4xl mx-auto uppercase opacity-40 tracking-tighter">
+            <div class="text-center pt-10 border-t border-white/10">
+                <p class="text-[9px] text-elite-muted leading-tight max-w-4xl mx-auto uppercase opacity-50 tracking-tight">
                     *DISCLAIMER: TESTOLINK IS A FOOD SUPPLEMENT. IT IS NOT A MEDICINE. IT IS NOT INTENDED TO DIAGNOSE, TREAT OR CURE ANY DISEASE. RESULTS VARY BY INDIVIDUAL BIOLOGY. CONSULT A PROFESSIONAL BEFORE STARTING ANY PROTOCOL. GOOGLE ADS COMPLIANT 2026.
                 </p>
             </div>
@@ -218,12 +243,11 @@
 
     <!-- Botão Móvel Fixo -->
     <div class="mobile-sticky-cta">
-        <button onclick="document.getElementById('hub-selector').scrollIntoView({behavior:'smooth'})" class="w-full bg-elite-accent text-white font-black py-5 rounded-2xl shadow-[0_10px_40px_rgba(59,130,246,0.4)] uppercase tracking-[0.2em] text-xs">
+        <button onclick="document.getElementById('hub-selector').scrollIntoView({behavior:'smooth'})" class="w-full bg-elite-accent text-white font-black py-5 rounded-2xl shadow-[0_15px_45px_rgba(37,99,235,0.5)] uppercase tracking-[0.2em] text-xs border border-white/20">
             <span data-i18n="cta_button">Ativar Alocação Agora</span>
         </button>
     </div>
 
-    <!-- Páginas de Termos -->
     <div id="legal-page" class="hidden-section fixed inset-0 z-[100] bg-elite-base overflow-y-auto">
         <div class="container mx-auto max-w-3xl px-6 py-16">
             <button onclick="hidePolicy()" class="mb-10 text-elite-accent font-black text-xs tracking-widest flex items-center gap-3">
@@ -234,12 +258,11 @@
     </div>
 
     <script>
-        // Traduções Suportadas
         const translations = {
             en: {
                 top_bar: "ELITE PERFORMANCE PROTOCOL | LIMITED DAILY ALLOCATION | FREE EU SHIPPING",
                 hero_badge: "ACTIVE BIO-SYNC PROTOCOL 2026",
-                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-elite-accent to-elite-glow text-glow uppercase'>Remastered Performance.</span>",
+                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-white via-elite-glow to-elite-accent text-glow uppercase'>Remastered Performance.</span>",
                 hero_subtitle: "The precision protocol for men who demand the absolute maximum from their biology. Optimize energy, focus, and physical dominance with European nutrient science.",
                 cta_button: "Activate Protocol Now",
                 select_title: "Select Operational Hub",
@@ -249,7 +272,7 @@
             nl: {
                 top_bar: "ELITE PERFORMANCE PROTOCOL | BEPERKTE DAGELIJKSE VOORRAAD | GRATIS VERZENDING",
                 hero_badge: "ACTIEF BIO-SYNC PROTOCOL 2026",
-                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-elite-accent to-elite-glow text-glow uppercase'>Verbeterde Prestaties.</span>",
+                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-white via-elite-glow to-elite-accent text-glow uppercase'>Verbeterde Prestaties.</span>",
                 hero_subtitle: "Het precisieprotocol voor mannen die het absolute maximale van hun biologie eisen. Optimaliseer energie, focus en fysieke dominantie.",
                 cta_button: "Activeer Protocol Nu",
                 select_title: "Selecteer Logistieke Hub",
@@ -259,7 +282,7 @@
             sv: {
                 top_bar: "ELITE PERFORMANCE PROTOKOLL | BEGRÄNSAT DAGLIGT LAGER | FRI FRAKT",
                 hero_badge: "AKTIVT BIO-SYNC PROTOKOLL 2026",
-                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-elite-accent to-elite-glow text-glow uppercase'>Remastered Prestation.</span>",
+                hero_title: "ELITE STATUS. <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-white via-elite-glow to-elite-accent text-glow uppercase'>Remastered Prestation.</span>",
                 hero_subtitle: "Precisionsprotokollet för män som kräver det absoluta maximala av sin biologi. Optimera energi, fokus och fysisk dominans.",
                 cta_button: "Aktivera Protokollet Nu",
                 select_title: "Välj Logistikhubb",
@@ -274,7 +297,6 @@
             refund: `<h1 class='text-4xl font-black text-white mb-8 tracking-tighter uppercase'>Refund Policy</h1><p>Garantia de performance de 30 dias incluída em todas as alocações.</p>`
         };
 
-        // Função de Alteração de Idioma
         function setLanguage(lang, countryCode) {
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
@@ -284,7 +306,6 @@
                 }
             });
 
-            // Atualização Visual das Bandeiras
             document.querySelectorAll('nav img').forEach(img => img.classList.remove('flag-active'));
             const activeFlag = document.getElementById('flag-' + countryCode);
             if (activeFlag) activeFlag.classList.add('flag-active');
@@ -303,7 +324,6 @@
         }
 
         window.onload = () => {
-            // Rastreamento GCLID
             const urlParams = new URLSearchParams(window.location.search);
             const gclid = urlParams.get('gclid');
             if (gclid) {
@@ -312,7 +332,6 @@
                 });
             }
             
-            // DETEÇÃO AUTOMÁTICA DE IDIOMA (Default: UK, Auto: NL/SE)
             const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
             const countryMap = { 'en': 'gb', 'nl': 'nl', 'sv': 'se' };
             
